@@ -1,0 +1,26 @@
+.map {
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+}
+
+#povmap {
+  width: max-content;
+}
+
+#map path {
+  fill: #202020;
+  stroke: rgb(255, 255, 255);
+  filter: drop-shadow(1px 1px 15px rgba(0, 0, 0, 0.75));
+}
+#map path:hover{
+  fill: yellow;
+}
+
+#city path {
+  fill: blue;
+}
+
+#lin {
+  stroke: rgb(50, 50, 50);
+}
