@@ -1,3 +1,10 @@
+# Weather App 
+
+Проект представляет из себя погодное приложение
+Это приложение показывает текующую погоду и метеоданные в Украине
+
+[Посетить приложение](https://seraphimsyv.github.io/ReactJS-Weather-App-Deploy/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
