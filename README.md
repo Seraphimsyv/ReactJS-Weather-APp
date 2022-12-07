@@ -5,9 +5,7 @@
 
 [Посетить приложение](https://seraphimsyv.github.io/ReactJS-Weather-App-Deploy/)
 
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Шаблон для этого проекта был загруженный с помощью [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
