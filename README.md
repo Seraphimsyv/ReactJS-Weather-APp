@@ -7,6 +7,8 @@
 
 # Шаблон для этого проекта был загруженный с помощью [Create React App](https://github.com/facebook/create-react-app).
 
+- версия NodeJS - @16.0.0
+
 ## Available Scripts
 
 In the project directory, you can run:

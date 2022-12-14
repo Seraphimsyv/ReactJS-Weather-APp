@@ -1,35 +1,37 @@
 import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { ReactComponent as UkraineMap } from './ukraine.svg';
 import './index.css';
 
-const Map = (props) => {
+const Map = ({ handler, region}) => {
 
   useEffect(() => {
 
     const handlerSelectRegion = (region) => {
-      props.handler( region );
+      handler( region );
     }
 
-    document.getElementById('map').childNodes.forEach(item => {
-      item.onclick = function handlerClick() {
-        handlerSelectRegion( item );
-      };
-      item.onmouseover = function handlerOver() {
-        if (item !== props.selected)
-          item.firstChild.style.fill = "yellow";
-      };
-      item.onmouseout = function handlerOut() {
-        if (item !== props.selected)
-          item.firstChild.style.fill = "#202020";
-      };
+    if (document.getElementById('map') !== null)
+      document.getElementById('map').childNodes.forEach(item => {
+        item.onclick = function handlerClick() {
+          handlerSelectRegion( item );
+        };
+        item.onmouseover = function handlerOver() {
+          if (item !== region)
+            item.firstChild.style.fill = "yellow";
+        };
+        item.onmouseout = function handlerOut() {
+          if (item !== region)
+            item.firstChild.style.fill = "#202020";
+        };
 
-      if (props.selected != null)
-        if (item === props.selected)
-          item.firstChild.style.fill = "blue";
-        else
-          item.firstChild.style.fill = "#202020";
-    })
-  }, [props])
+        if (region != null)
+          if (item === region)
+            item.firstChild.style.fill = "blue";
+          else
+            item.firstChild.style.fill = "#202020";
+      })
+  }, [handler, region])
 
   return (
     <div className="map">
@@ -38,4 +40,9 @@ const Map = (props) => {
   )
 }
 
-export { Map };
+Map.propTypes = {
+  handler: PropTypes.func,
+  region: PropTypes.object
+}
+
+export default Map;
